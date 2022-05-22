@@ -16,7 +16,7 @@ sass:
     sass_dir: _sass
 
 # define mobile
-on_mobile: 600px
+on_mobile: 800px
 
 # plugins
 plugins:

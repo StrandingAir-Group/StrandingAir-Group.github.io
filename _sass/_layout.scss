@@ -1,7 +1,7 @@
 // layout styling
 
 .content-wrapper {
-    width: calc(100% - 96px);
+    width: calc(100% - #{$header-content-padding} * 2);
     max-width: $max-content-width;
     min-width: calc(#{$min-content-width} - 50px);
     margin: auto;
@@ -11,7 +11,7 @@
 // mobile
 @include media-query($on-palm) {
     .content-wrapper {
-        width: calc(100% - 50px);
+        width: calc(100% - #{$header-content-padding});
         max-width: unset;
         min-width: unset;
         margin: auto;

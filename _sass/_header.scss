@@ -3,17 +3,19 @@
 // defaults
 
 #site-header {
-    margin: 48px 0 48px 0;
-    height: 48px;
+    margin: $header-content-padding 0 $header-content-padding 0;
+    height: $header-content-padding;
+    
     #site-header-container {
         display: flex;
         justify-content: space-between;
+        gap: $header-content-padding;
         .link {
-
+            text-decoration: none;
         }
 
         .logo {
-            height: 48px
+            height: $header-content-padding;
         }
 
         .nav {
@@ -26,13 +28,49 @@
 
 #site-navigation {
     display: flex;
-    gap: 32px;
+    gap: $header-nav-item-gap;
     .item {
         text-decoration: none;
         color: black;
         &.selected {
             border-bottom: solid;
-            border-width: 2px;
+            border-width: $border-width;
+        }
+    }
+}
+
+// mobile
+@include media-query($on-palm) {
+    #site-header {
+        margin: $header-content-padding-mobile 0 $header-content-padding-mobile 0;
+        #site-header-container {
+            .logo {
+                height: $header-content-padding-mobile;
+            }
+            .nav {
+                margin: $header-content-padding-mobile 0 $header-content-padding-mobile 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+            }            
+        }
+    }
+
+    #site-navigation {
+        display: flex;
+        gap: $header-nav-item-gap;
+        justify-content: space-around;
+        .item {
+            text-decoration: none;
+            color: black;
+            &.selected {
+                border-bottom: solid;
+                border-width: $border-width;
+            }
         }
     }
 }
