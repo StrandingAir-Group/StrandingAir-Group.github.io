@@ -1,0 +1,38 @@
+// header.html and nav.html
+
+// defaults
+
+#site-header {
+    margin: 48px 0 48px 0;
+    height: 48px;
+    #site-header-container {
+        display: flex;
+        justify-content: space-between;
+        .link {
+
+        }
+
+        .logo {
+            height: 48px
+        }
+
+        .nav {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}
+
+#site-navigation {
+    display: flex;
+    gap: 32px;
+    .item {
+        text-decoration: none;
+        color: black;
+        &.selected {
+            border-bottom: solid;
+            border-width: 2px;
+        }
+    }
+}

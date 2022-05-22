@@ -1,0 +1,32 @@
+---
+---
+
+@charset "utf-8";
+
+// defaults
+$font-roboto:                     'Roboto', Arial, sans-serif;
+$base-font-size:                  16px;
+$base-font-weight:                400;
+$base-font-family:                $font-roboto;
+
+$max-content-width:               1024px;
+$min-content-width:               {{ site.on_mobile }};
+$max-content-width-mobile:        {{ site.on_mobile }};
+
+// device detection
+$on-palm:                         {{ site.on_mobile }} !default;
+
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+// Imports
+@import
+  "fonts_roboto",
+  "base",
+  "layout",
+  "header",
+  "pages"
+;

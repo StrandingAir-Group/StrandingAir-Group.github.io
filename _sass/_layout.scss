@@ -1,0 +1,20 @@
+// layout styling
+
+.content-wrapper {
+    width: calc(100% - 96px);
+    max-width: $max-content-width;
+    min-width: calc(#{$min-content-width} - 50px);
+    margin: auto;
+    overflow: hidden;
+}
+
+// mobile
+@include media-query($on-palm) {
+    .content-wrapper {
+        width: calc(100% - 50px);
+        max-width: unset;
+        min-width: unset;
+        margin: auto;
+    }
+}
+

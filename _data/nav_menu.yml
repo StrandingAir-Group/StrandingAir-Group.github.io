@@ -1,0 +1,15 @@
+- title: "home"
+  href: "/"
+
+- title: "news"
+  href: "/news"
+
+- title: "works"
+  href: "/works"
+
+- title: "team"
+  href: "/team"
+
+- title: "contact"
+  href: "/contact"
+
