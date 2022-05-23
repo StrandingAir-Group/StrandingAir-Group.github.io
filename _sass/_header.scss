@@ -50,6 +50,7 @@
 @include media-query($on-palm) {
     #site-header {
         padding: $header-content-padding-mobile 0 $header-content-padding-mobile 0;
+        height: $header-content-padding-mobile;
         #site-header-container {
             .logo {
                 height: $header-content-padding-mobile;
