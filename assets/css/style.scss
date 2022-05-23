@@ -5,7 +5,7 @@
 
 // defaults
 $font-roboto:                     'Roboto', Arial, sans-serif;
-$base-font-size:                  16px;
+$base-font-size:                  14px;
 $base-font-weight:                400;
 $base-font-family:                $font-roboto;
 
@@ -13,7 +13,7 @@ $max-content-width:               1024px;
 $min-content-width:               {{ site.on_mobile }};
 $max-content-width-mobile:        {{ site.on_mobile }};
 
-$header-content-padding:          48px;
+$header-content-padding:          44px;
 $header-content-padding-mobile:   32px;
 $header-nav-width:                40%;
 
@@ -35,5 +35,6 @@ $on-palm:                         {{ site.on_mobile }} !default;
   "layout",
   "header",
   "page_news",
-  "page_works"
+  "page_works",
+  "page_home"
 ;

@@ -6,6 +6,7 @@
     padding: $header-content-padding 0 $header-content-padding 0;
     height: $header-content-padding;
     position: fixed;
+    z-index: 1000;
     top: 0;
     left: 0;
     background-image: linear-gradient(to top, rgba($color: white, $alpha: 0), rgba($color: white, $alpha: 1) 40%);
