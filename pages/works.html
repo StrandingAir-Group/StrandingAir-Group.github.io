@@ -2,3 +2,22 @@
 permalink: /works
 layout: page
 ---
+
+{% assign works = site.works | sort: 'date' %}
+
+<div id="page-works" class="page">
+    <div class="content-wrapper">
+        <div id="page-works-container">
+            {% for w in works %}
+            <div class="section">
+                <img class="figure">
+                <div class="info">
+                    <p class="title">{{ w.title }}</p>
+                    <p class="date">{{ w.time }}</p>
+                </div>
+                
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

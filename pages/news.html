@@ -2,3 +2,24 @@
 permalink: /news
 layout: page
 ---
+
+{% assign news = site.news | sort: 'date' %}
+
+<div id="page-news" class="page">
+    <div class="content-wrapper">
+        <div id="page-news-container">
+            {% for n in news %}
+            <div class="section">
+                <img class="figure">
+                <div class="info">
+                    <p class="date">{{ n.time }}</p>
+                    <div class="line"></div>
+                    <p class="title">{{ n.title }}</p>
+                    <p class="desc">{{ n.desc }}</p>
+                </div>
+                
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

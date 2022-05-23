@@ -3,8 +3,13 @@
 // defaults
 
 #site-header {
-    margin: $header-content-padding 0 $header-content-padding 0;
+    padding: $header-content-padding 0 $header-content-padding 0;
     height: $header-content-padding;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to top, rgba($color: white, $alpha: 0), rgba($color: white, $alpha: 1) 40%);
+    width: 100%;
     
     #site-header-container {
         display: flex;
@@ -19,6 +24,7 @@
         }
 
         .nav {
+            width: $header-nav-width;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -28,7 +34,7 @@
 
 #site-navigation {
     display: flex;
-    gap: $header-nav-item-gap;
+    justify-content: space-between;
     .item {
         text-decoration: none;
         color: black;
@@ -42,13 +48,14 @@
 // mobile
 @include media-query($on-palm) {
     #site-header {
-        margin: $header-content-padding-mobile 0 $header-content-padding-mobile 0;
+        padding: $header-content-padding-mobile 0 $header-content-padding-mobile 0;
         #site-header-container {
             .logo {
                 height: $header-content-padding-mobile;
             }
             .nav {
-                margin: $header-content-padding-mobile 0 $header-content-padding-mobile 0;
+                background-image: linear-gradient(to bottom, rgba($color: white, $alpha: 0), rgba($color: white, $alpha: 1) 40%);
+                padding: $header-content-padding-mobile 0 $header-content-padding-mobile 0;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -62,7 +69,6 @@
 
     #site-navigation {
         display: flex;
-        gap: $header-nav-item-gap;
         justify-content: space-around;
         .item {
             text-decoration: none;

@@ -15,7 +15,7 @@ $max-content-width-mobile:        {{ site.on_mobile }};
 
 $header-content-padding:          48px;
 $header-content-padding-mobile:   32px;
-$header-nav-item-gap:             32px;
+$header-nav-width:                40%;
 
 $border-width:                    2px;
 
@@ -34,5 +34,6 @@ $on-palm:                         {{ site.on_mobile }} !default;
   "base",
   "layout",
   "header",
-  "pages"
+  "page_news",
+  "page_works"
 ;

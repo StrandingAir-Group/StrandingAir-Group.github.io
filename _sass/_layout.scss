@@ -8,6 +8,10 @@
     overflow: hidden;
 }
 
+.page {
+    margin-top: calc(#{$header-content-padding} * 3);
+}
+
 // mobile
 @include media-query($on-palm) {
     .content-wrapper {
@@ -15,6 +19,11 @@
         max-width: unset;
         min-width: unset;
         margin: auto;
+    }
+
+    .page {
+        margin-top: calc(#{$header-content-padding-mobile} * 3);
+        margin-bottom: calc(#{$header-content-padding-mobile} * 3);
     }
 }
 
