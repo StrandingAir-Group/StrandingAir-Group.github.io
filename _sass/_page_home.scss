@@ -30,7 +30,7 @@ $image_width:       800px;
     0% {
         opacity: 100%;
     }
-    30% {
+    50% {
         opacity: 0%;
     }
     100% {
@@ -38,45 +38,16 @@ $image_width:       800px;
     }
 }
 
-// // mobile
-// @include media-query($on-palm) {
-//     #page-home {
-//         overflow: visible;
-//         height: fit-content;
-//         .content-wrapper {
-//             overflow: hidden;
-//         }
-//         #page-home-container {
-//             position: static;
-//             height: fit-content;
-    
-//             .image {
-//                 position: static;
-                
-//                 &.first,
-//                 &.second,
-//                 &.third {
-//                     // display: none;
-//                     width: calc(100vw - #{$header-content-padding});
-//                     height: calc((100vw - #{$header-content-padding}) * #{$image_height} / #{$image_width});
-//                     top: unset;
-//                     left: unset;
-//                     z-index: unset;
-//                 }
+// mobile
+@include media-query($on-palm) {
+    #page-home {
+        height: calc(100vh - #{$header-content-padding-mobile} * 3);
+        #page-home-container {
+            .contact {
+                display: none;
+            }
+        }
+    }
 
-//                 // &.third {
-//                 //     display: block;
-//                 //     width: calc(100vw - #{$header-content-padding});
-//                 //     height: calc((100vw - #{$header-content-padding}) * #{$image_height} / #{$image_width});
-//                 // }
-
-//             }      
-//             .contact {
-//                 position: static;
-//                 bottom: unset;
-//                 left: unset;
-//             }  
-//         }
-//     }
     
-// }
+}
