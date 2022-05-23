@@ -9,7 +9,8 @@ $image_width:       800px;
     }
     #page-home-container {
         position: relative;
-        height: $image_height;
+        height: calc(#{$image_height} + 55px);
+
         .image {
             position: absolute;
             &.first {
