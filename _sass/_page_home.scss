@@ -12,6 +12,7 @@ $image_width:       800px;
         height: calc(#{$image_height} + 55px);
 
         .image {
+            visibility: hidden;
             position: absolute;
             transition: all 1s;
         }      

@@ -7,6 +7,7 @@ const IMAGE_WIDTH = "800px";
 
 const gallery_style_init = [
     {
+        visibility: "visible",
         width: `calc(${IMAGE_WIDTH} * 0.8 * 0.75)`,
         height: `calc(${IMAGE_HEIGHT} * 0.8 * 0.75)`,
         top: "0",
@@ -16,6 +17,7 @@ const gallery_style_init = [
         animationDuration: "1s",
     },
     {
+        visibility: "visible",
         width: `calc(${IMAGE_WIDTH} * 0.8)`,
         height: `calc(${IMAGE_HEIGHT} * 0.8)`,
         top: "20px",
@@ -25,6 +27,7 @@ const gallery_style_init = [
         animationDuration: "1s",
     },
     {
+        visibility: "visible",
         width: `${IMAGE_WIDTH}`,
         height: `${IMAGE_HEIGHT}`,
         top: "55px",
