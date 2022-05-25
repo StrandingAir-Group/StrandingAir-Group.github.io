@@ -1,26 +1,44 @@
----
-permalink: /
-layout: page
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo One</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/utilities.js"></script>
+    <script src="./assets/js/main.js"></script>
+</head>
+<body>
+    <div id="site-container">
+        <header>
+            <img id="site-logo" src="./assets/img/logo.svg">
+        </header>
 
-<script src="/assets/js/home.js"></script>
-<style>
-    html {
-        overflow: hidden;
-    }
-</style>
-<div id="page-home" class="page">
-    <div class="content-wrapper">
-        <div id="page-home-container">
-            <img src="/assets/img/home_image_a.jpg" class="image">
-            <img src="/assets/img/home_image_b.jpg" class="image">
-            <img src="/assets/img/home_image_c.jpg" class="image">
+        <div id="site-prompts-container"></div>
 
-            <div class="contact">
-                <p>EMAIL</p>
-                <p>{{ site.email }}</p>
-            </div>                    
-        </div>
+        <nav id="site-navigation">
+            <a class="nav-item" href="/">
+                <p>HOME</p>
+                <p>首页</p>
+                <p>첫 장</p>
+            </a>
+            <a class="nav-item" href="/">
+                <p>ABOUT</p>
+                <p>关于我们</p>
+                <p>회사 소개</p>
+            </a>
+            <a class="nav-item" href="/">
+                <p>CONTACT</p>
+                <p>联系我们</p>
+                <p>문의하기</p>
+            </a>
+        </nav>
+
+        <footer>
+            <p id="site-footer">Stranding Air 2022</p>
+        </footer>
     </div>
 
-</div>
+</body>
+</html>

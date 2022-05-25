@@ -1,5 +1,0 @@
-<div id="site-navigation">
-    {% for item in site.data.nav_menu %}
-        <a href="{{item.href}}" class="item {% if page.url == item.href %}selected{% endif %}">{{item.title}}</a>
-    {% endfor %}
-</div>

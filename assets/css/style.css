@@ -1,0 +1,61 @@
+html {
+  background-color: black;
+  color: white;
+  font-size: 1.7vh;
+}
+html p {
+  margin: 0;
+  padding: 0;
+}
+
+#site-container #site-logo {
+  height: 70vh;
+  object-fit: contain;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  pointer-events: none;
+}
+#site-container #site-footer {
+  position: fixed;
+  bottom: 2.5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  word-break: keep-all;
+  white-space: nowrap;
+}
+#site-container #site-navigation {
+  display: flex;
+  position: fixed;
+  gap: 5vh;
+  top: 88%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#site-container #site-navigation p {
+  text-align: center;
+  word-break: keep-all;
+  white-space: nowrap;
+}
+#site-container #site-navigation .nav-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: white;
+  transform: rotate(-90deg);
+  width: 10vh;
+}
+#site-container #site-navigation .nav-item p {
+  text-align: left;
+}
+#site-container #site-prompts-container .prompt {
+  position: fixed;
+  word-break: keep-all;
+  white-space: nowrap;
+  color: gray;
+}
+
+/*# sourceMappingURL=style.css.map */
