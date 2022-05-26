@@ -48,7 +48,7 @@ body.loading #site-loading {
 }
 #site-loading img {
   height: 28vh;
-  width: 28vw;
+  width: 38vw;
 }
 
 #site-container {
@@ -56,7 +56,7 @@ body.loading #site-loading {
 }
 #site-container #site-logo {
   height: 50vh;
-  width: 50vw;
+  width: 60vw;
   object-fit: contain;
   position: fixed;
   top: 40%;
