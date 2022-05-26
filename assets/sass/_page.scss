@@ -71,10 +71,11 @@ body {
             width: 10vh;
 
             cursor: pointer;
-            border: dashed;
+            border: solid;
             border-width: 0.1vh;
             margin: 0.5vh;
             background-color: black;
+            color: white;
             
             
 
@@ -125,7 +126,7 @@ body {
         }
 
         #site-navigation #nav-home {
-            border: solid;
+            border: dashed;
             border-width: 0.1vh;
         }
     }
@@ -135,7 +136,7 @@ body {
         }
 
         #site-navigation #nav-about {
-            border: solid;
+            border: dashed;
             border-width: 0.1vh;
         }
     }
@@ -145,7 +146,7 @@ body {
         }
 
         #site-navigation #nav-contact {
-            border: solid;
+            border: dashed;
             border-width: 0.1vh;
         }
     }

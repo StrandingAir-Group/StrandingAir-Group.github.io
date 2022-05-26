@@ -1,6 +1,6 @@
 html {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   font-size: 2vh;
   font-family: "Noto Sans SC", "Noto Sans KR";
 }
@@ -95,10 +95,11 @@ body.loading #site-loading {
   transform: rotate(-90deg);
   width: 10vh;
   cursor: pointer;
-  border: dashed;
+  border: solid;
   border-width: 0.1vh;
   margin: 0.5vh;
   background-color: black;
+  color: white;
 }
 #site-container #site-navigation .nav-item p {
   text-align: center;
@@ -134,21 +135,21 @@ body.loading #site-loading {
   display: block;
 }
 #site-container.home #site-navigation #nav-home {
-  border: solid;
+  border: dashed;
   border-width: 0.1vh;
 }
 #site-container.about #site-about {
   display: block;
 }
 #site-container.about #site-navigation #nav-about {
-  border: solid;
+  border: dashed;
   border-width: 0.1vh;
 }
 #site-container.contact #site-contact {
   display: block;
 }
 #site-container.contact #site-navigation #nav-contact {
-  border: solid;
+  border: dashed;
   border-width: 0.1vh;
 }
 
