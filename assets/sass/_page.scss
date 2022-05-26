@@ -26,7 +26,7 @@ $site-padding:      2.5%;
         display: flex;
         position: fixed;
         justify-content: space-between;
-        width: 50vh;
+        width: 40vh;
         bottom: 5%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -45,9 +45,12 @@ $site-padding:      2.5%;
             width: 10vh;
 
             cursor: pointer;
+            border: dashed;
+            border-width: 0.1vh;
+            
 
             p {
-                text-align: left;
+                text-align: center;
             }
         }
 
@@ -75,6 +78,10 @@ $site-padding:      2.5%;
         // width: 50vh;
         // height: 25vh;
         text-align: center;
+        p {
+            margin: 0.25vh 0 0.25vh 0;
+        }
+        
     }
 
     #site-logo,
@@ -87,15 +94,30 @@ $site-padding:      2.5%;
         #site-logo {
             display: block;
         }
+
+        #site-navigation #nav-home {
+            border: solid;
+            border-width: 0.1vh;
+        }
     }
     &.about {
         #site-about {
             display: block;
         }
+
+        #site-navigation #nav-about {
+            border: solid;
+            border-width: 0.1vh;
+        }
     }
     &.contact {
         #site-contact {
             display: block;
+        }
+
+        #site-navigation #nav-contact {
+            border: solid;
+            border-width: 0.1vh;
         }
     }
 }

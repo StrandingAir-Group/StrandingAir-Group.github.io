@@ -31,10 +31,15 @@ function SALogoAnimation() {
 function initPromptAnimation(prompts) {
     const prompts_container = document.getElementById('site-prompts-container');
     const gen_prompt_parameters = () => {
-        // const transition_time = Math.floor(Math.random() * Math.floor(window.innerWidth/50)) + 2;
-        const transition_time = Math.floor(Math.random() * 4) + 2;
+        const transition_time = Math.floor(Math.random() * Math.floor(window.innerWidth/75)) + 2;
+        // const transition_time = Math.floor(Math.random() * 4) + 2;
+        const gen_text = () => {
+            return prompts[Math.floor(Math.random() * prompts.length)]
+            + '<br>'.repeat(Math.floor(Math.random() * 50)) 
+            + '&nbsp'.repeat(Math.floor(Math.random() * 100));
+        }
         return {
-            text: prompts[Math.floor(Math.random() * prompts.length)],
+            text: gen_text() + gen_text() + gen_text() + gen_text() + gen_text(),
             time: transition_time,
             styles: {
                 start: {
@@ -65,11 +70,21 @@ function initPromptAnimation(prompts) {
                     prompts_container.appendChild(el);
                     setTimeout(() => {
                         Object.assign(el.style, el_parameters.styles.end);
-                        setTimeout(() => {
-                            prompts_container.removeChild(el);
-                        }, el_parameters.time * 1000);
-                    }, 250);
-                }, 75);                
+
+                        let timeout = null;
+                        const event_handler = () => {
+                            clearInterval(timeout);
+                            el.remove();
+                        };           
+                        const timeout_handler = () => {
+                            window.removeEventListener('resize', event_handler);
+                            el.remove();
+                        };
+
+                        window.addEventListener('resize', event_handler, {once: true});
+                        timeout = setTimeout(timeout_handler, el_parameters.time * 1000);
+                    }, 100);
+                }, 50);                
             }
         },
         end: () => {
