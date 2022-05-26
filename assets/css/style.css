@@ -81,6 +81,7 @@ body.loading #site-loading {
   bottom: 5%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 1000;
 }
 #site-container #site-navigation p {
   text-align: center;
@@ -97,6 +98,7 @@ body.loading #site-loading {
   border: dashed;
   border-width: 0.1vh;
   margin: 0.5vh;
+  background-color: black;
 }
 #site-container #site-navigation .nav-item p {
   text-align: center;

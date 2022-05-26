@@ -55,6 +55,7 @@ body {
         bottom: 5%;
         left: 50%;
         transform: translate(-50%, -50%);
+        z-index: 1000;
         p {
             text-align: center;
             word-break: keep-all;
@@ -73,6 +74,8 @@ body {
             border: dashed;
             border-width: 0.1vh;
             margin: 0.5vh;
+            background-color: black;
+            
             
 
             p {
