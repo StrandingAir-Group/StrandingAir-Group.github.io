@@ -42,13 +42,13 @@ body.loading #site-loading {
 #site-loading {
   display: none;
   position: fixed;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 #site-loading img {
-  height: 25vh;
-  width: 25vw;
+  height: 28vh;
+  width: 28vw;
 }
 
 #site-container {
