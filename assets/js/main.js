@@ -24,7 +24,7 @@ function SALogoAnimation() {
     // }, 3000, 8000);
 
     setRandInterval(()=>{
-        flashElement(logo, ()=> {logo.style.transform = 'translate(-50%, -50%) scaleX(' + [-1, 1][Math.floor(Math.random() * 2)] + ')'});
+        flashElement(logo, ()=> {logo.style.transform = 'translate(-50%, -50%) rotate(45deg) scaleX(' + [-1, 1][Math.floor(Math.random() * 2)] + ')'});
     }, 3000, 8000)
     
 }

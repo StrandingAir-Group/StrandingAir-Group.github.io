@@ -15,7 +15,7 @@ html p {
   position: fixed;
   top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(45deg);
   z-index: 1000;
   pointer-events: none;
 }
