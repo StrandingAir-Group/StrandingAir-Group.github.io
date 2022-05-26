@@ -159,6 +159,6 @@ document.addEventListener('DOMContentLoaded', () => {
         flashElement(document.getElementById('site-loading'), () => {    
             document.body.classList.remove('loading');
         })
-    }, 1000);
+    }, 2000);
     
 });
