@@ -1,6 +1,31 @@
 $site-padding:      2.5%;
 
+body {
+    &.loading {
+        #site-container {
+            visibility: hidden;
+        }
+        #site-loading {
+            display: block;
+        }
+    }
+}
+
+#site-loading {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    img {
+        height: 25vh;
+        width: 25vw;
+    }
+}
+
 #site-container {
+    visibility: visible;
     #site-logo {
         height: 50vh;
         width: 50vw;
@@ -47,6 +72,7 @@ $site-padding:      2.5%;
             cursor: pointer;
             border: dashed;
             border-width: 0.1vh;
+            margin: 0.5vh;
             
 
             p {

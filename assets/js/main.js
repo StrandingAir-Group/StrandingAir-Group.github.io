@@ -158,4 +158,13 @@ function main() {
     });
 }
 
-window.addEventListener('load', main);
+
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(()=>{
+        main();
+        flashElement(document.getElementById('site-loading'), () => {    
+            document.body.classList.remove('loading');
+        })
+    }, 1000);
+    
+});

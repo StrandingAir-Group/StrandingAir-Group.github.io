@@ -32,6 +32,28 @@ html p {
   font-weight: 400;
   src: url(../font/NotoSansSC-Regular.otf) format("opentype");
 }
+body.loading #site-container {
+  visibility: hidden;
+}
+body.loading #site-loading {
+  display: block;
+}
+
+#site-loading {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#site-loading img {
+  height: 25vh;
+  width: 25vw;
+}
+
+#site-container {
+  visibility: visible;
+}
 #site-container #site-logo {
   height: 50vh;
   width: 50vw;
@@ -74,6 +96,7 @@ html p {
   cursor: pointer;
   border: dashed;
   border-width: 0.1vh;
+  margin: 0.5vh;
 }
 #site-container #site-navigation .nav-item p {
   text-align: center;
