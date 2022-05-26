@@ -18,7 +18,7 @@ function SALogoAnimation() {
     const logo = document.getElementById('site-logo');
     const rotate_config = ['45deg', '90deg', '135deg', '-45deg', '-90deg', '-135deg']
 
-    flashElement(logo, () => {logo.style.transform = 'translate(-50%, -50%) rotate(' + rotate_config[Math.floor(Math.random() * rotate_config.length)] + ')'});
+    logo.style.transform = 'translate(-50%, -50%) rotate(' + rotate_config[Math.floor(Math.random() * rotate_config.length)] + ')';
     setRandInterval(() => {
         flashElement(logo, () => {logo.style.transform = 'translate(-50%, -50%) rotate(' + rotate_config[Math.floor(Math.random() * rotate_config.length)] + ')'});
     }, 3000, 8000);
@@ -68,14 +68,16 @@ function main() {
     const prompts = ["施工中...", "Work in progress...", "진행중인 작업..."];
     const footer = document.getElementById('site-footer');
 
+    // init footer
     setInterval(() => {
         footer.innerHTML = "STRANDING AIR" + " @ " + String(Date.now()); 
     }, 1);
+
+    // init animations
     initPromptAnimation(prompts);
     SALogoAnimation();
 
     // pages
-
     const site_container = document.getElementById('site-container');
     const nav_home = document.getElementById('nav-home');
     const nav_about = document.getElementById('nav-about');
@@ -87,6 +89,8 @@ function main() {
 
     let current_page = "home";
     let current_page_ele = site_home;
+    site_container.classList.add(current_page);
+
     // home
     nav_home.addEventListener('click', () => {
         flashElement(current_page_ele, () => {
