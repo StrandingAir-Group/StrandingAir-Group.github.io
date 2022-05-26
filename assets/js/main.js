@@ -38,7 +38,7 @@ function initPromptAnimation(prompts) {
                     transform: 'translate(-100%, 0)',
                     transition: 'all ' + String(transition_time) + 's',
                     fontSize: String(Math.floor(Math.random() * 5)) + 'vh',
-                    color: 'rgba(128,128,128,' + String(Math.random()) + ')'
+                    color: 'rgba(150,150,150,' + String(Math.random()) + ')'
                 },
                 end: {
                     left: '100vw',
