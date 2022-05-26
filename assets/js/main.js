@@ -32,14 +32,8 @@ function initPromptAnimation(prompts) {
     const prompts_container = document.getElementById('site-prompts-container');
     const gen_prompt_parameters = () => {
         const transition_time = Math.floor(Math.random() * Math.floor(window.innerWidth/75)) + 2;
-        // const transition_time = Math.floor(Math.random() * 4) + 2;
-        const gen_text = () => {
-            return prompts[Math.floor(Math.random() * prompts.length)]
-            + '<br>'.repeat(Math.floor(Math.random() * 50)) 
-            + '&nbsp'.repeat(Math.floor(Math.random() * 100));
-        }
         return {
-            text: gen_text() + gen_text() + gen_text() + gen_text() + gen_text(),
+            text: prompts[Math.floor(Math.random() * prompts.length)],
             time: transition_time,
             styles: {
                 start: {
