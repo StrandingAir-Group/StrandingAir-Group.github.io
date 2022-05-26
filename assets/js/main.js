@@ -32,7 +32,7 @@ function initPromptAnimation(prompts) {
     const prompts_container = document.getElementById('site-prompts-container');
     const gen_prompt_parameters = () => {
         // const transition_time = Math.floor(Math.random() * Math.floor(window.innerWidth/50)) + 2;
-        const transition_time = Math.floor(Math.random() * 6) + 2;
+        const transition_time = Math.floor(Math.random() * 4) + 2;
         return {
             text: prompts[Math.floor(Math.random() * prompts.length)],
             time: transition_time,
