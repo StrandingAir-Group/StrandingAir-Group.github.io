@@ -1,13 +1,26 @@
 html {
   background-color: black;
   color: white;
-  font-size: 1.7vh;
+  font-size: 2vh;
+  font-family: "Noto Sans SC", "Noto Sans KR";
 }
 html p {
   margin: 0;
   padding: 0;
 }
 
+@font-face {
+  font-family: "Noto Sans KR";
+  font-size: normal;
+  font-weight: 400;
+  src: url(../font/NotoSansKR-Regular.otf) format("opentype");
+}
+@font-face {
+  font-family: "Noto Sans SC";
+  font-size: normal;
+  font-weight: 400;
+  src: url(../font/NotoSansSC-Regular.otf) format("opentype");
+}
 #site-container #site-logo {
   height: 50vh;
   width: 50vw;
@@ -30,8 +43,9 @@ html p {
 #site-container #site-navigation {
   display: flex;
   position: fixed;
-  gap: 5vh;
-  bottom: 7.5%;
+  justify-content: space-between;
+  width: 50vh;
+  bottom: 5%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -67,6 +81,7 @@ html p {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1000;
+  text-align: center;
 }
 #site-container #site-logo,
 #site-container #site-about,

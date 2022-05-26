@@ -13,7 +13,6 @@ function flashElement(ele, callback) {
     }, 50);
 }
 
-
 function SALogoAnimation() {
     const logo = document.getElementById('site-logo');
     // const rotate_config = ['0deg', '45deg', '90deg', '135deg', '-45deg', '-90deg', '-135deg']
@@ -25,15 +24,15 @@ function SALogoAnimation() {
 
     setRandInterval(()=>{
         flashElement(logo, ()=> {logo.style.transform = 'translate(-50%, -50%) rotate(45deg) scaleX(' + [-1, 1][Math.floor(Math.random() * 2)] + ')'});
-    }, 3000, 8000)
-    
+    }, 2000, 7000)
 }
+
 
 function initPromptAnimation(prompts) {
     const prompts_container = document.getElementById('site-prompts-container');
     const gen_prompt_parameters = () => {
         // const transition_time = Math.floor(Math.random() * Math.floor(window.innerWidth/50)) + 2;
-        const transition_time = Math.floor(Math.random() * 4) + 2;
+        const transition_time = Math.floor(Math.random() * 6) + 2;
         return {
             text: prompts[Math.floor(Math.random() * prompts.length)],
             time: transition_time,
@@ -43,31 +42,42 @@ function initPromptAnimation(prompts) {
                     left: '0',
                     transform: 'translate(-100%, 0)',
                     transition: 'all ' + String(transition_time) + 's',
-                    fontSize: String(Math.floor(Math.random() * 5)) + 'vh',
-                    color: 'rgba(150,150,150,' + String(Math.random()) + ')'
+                    fontSize: String(Math.floor(Math.random() * 3) + 1) + 'vh',
+                    color: 'rgba(140,140,140,' + String(Math.random() * 0.9 + 0.1) + ')'
                 },
                 end: {
                     left: '100vw',
                     transform: 'translate(100%, 0)'
                 }
             }
-
         }
     }
-    setInterval(() => {
-        const el_parameters = gen_prompt_parameters();
-        const el = createHTMLElement('p', el_parameters.text, {class: 'prompt'}); 
-        
+    let promptAnimationInterval = null;
+    return {
+        start: () => {
+            if (promptAnimationInterval === null) {
+                promptAnimationInterval = setInterval(() => {
+                    const el_parameters = gen_prompt_parameters();
+                    const el = createHTMLElement('p', el_parameters.text, {class: 'prompt'}); 
+                    
 
-        Object.assign(el.style, el_parameters.styles.start);
-        prompts_container.appendChild(el);
-        setTimeout(() => {
-            Object.assign(el.style, el_parameters.styles.end);
-            setTimeout(() => {
-                prompts_container.removeChild(el);
-            }, el_parameters.time * 1000);
-        }, 250);
-    }, 100);
+                    Object.assign(el.style, el_parameters.styles.start);
+                    prompts_container.appendChild(el);
+                    setTimeout(() => {
+                        Object.assign(el.style, el_parameters.styles.end);
+                        setTimeout(() => {
+                            prompts_container.removeChild(el);
+                        }, el_parameters.time * 1000);
+                    }, 250);
+                }, 75);                
+            }
+        },
+        end: () => {
+            clearInterval(promptAnimationInterval);
+            promptAnimationInterval = null;
+        }
+    }
+
     
 }
 
@@ -81,7 +91,8 @@ function main() {
     }, 1);
 
     // init animations
-    initPromptAnimation(prompts);
+    const promptAnimation = initPromptAnimation(prompts);
+    promptAnimation.start();
     SALogoAnimation();
 
     // pages
@@ -101,6 +112,7 @@ function main() {
     // home
     nav_home.addEventListener('click', () => {
         flashElement(current_page_ele, () => {
+            promptAnimation.start();
             site_container.classList.remove(current_page);
             site_container.classList.add('home');
             current_page = 'home';
@@ -111,6 +123,7 @@ function main() {
     // about
     nav_about.addEventListener('click', () => {
         flashElement(current_page_ele, () => {
+            promptAnimation.end();
             site_container.classList.remove(current_page);
             site_container.classList.add('about');
             current_page = 'about';
@@ -121,6 +134,7 @@ function main() {
     // contact
     nav_contact.addEventListener('click', () => {
         flashElement(current_page_ele, () => {
+            promptAnimation.end();
             site_container.classList.remove(current_page);
             site_container.classList.add('contact');
             current_page = 'contact';
