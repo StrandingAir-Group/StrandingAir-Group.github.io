@@ -37,7 +37,7 @@ function initPromptAnimation(prompts) {
             time: transition_time,
             styles: {
                 start: {
-                    top:  String(Math.floor(Math.random() * 100)) + 'vh',
+                    top:  String(Math.floor(Math.random() * 65) + 10) + 'vh',
                     left: '0',
                     transform: 'translate(-100%, 0)',
                     transition: 'all ' + String(transition_time) + 's' + ' ' + 'linear',
