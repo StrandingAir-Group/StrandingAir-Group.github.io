@@ -37,7 +37,8 @@ function initPromptAnimation(prompts) {
                     left: '0',
                     transform: 'translate(-100%, 0)',
                     transition: 'all ' + String(transition_time) + 's',
-                    fontSize: String(Math.floor(Math.random() * 12)) + 'vh',
+                    fontSize: String(Math.floor(Math.random() * 5)) + 'vh',
+                    color: 'rgba(128,128,128,' + String(Math.random()) + ')'
                 },
                 end: {
                     left: '100vw',
@@ -60,7 +61,7 @@ function initPromptAnimation(prompts) {
                 prompts_container.removeChild(el);
             }, el_parameters.time * 1000);
         }, 250);
-    }, 500);
+    }, 50);
     
 }
 

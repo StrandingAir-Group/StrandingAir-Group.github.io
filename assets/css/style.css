@@ -55,7 +55,7 @@ html p {
   position: fixed;
   word-break: keep-all;
   white-space: nowrap;
-  color: gray;
+  font-weight: 200;
 }
 #site-container #site-about,
 #site-container #site-contact {
