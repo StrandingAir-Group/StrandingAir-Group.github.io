@@ -43,10 +43,9 @@ html p {
   position: relative;
   display: flex;
   flex-direction: column;
-  text-decoration: none;
-  color: white;
   transform: rotate(-90deg);
   width: 10vh;
+  cursor: pointer;
 }
 #site-container #site-navigation .nav-item p {
   text-align: left;
@@ -56,6 +55,30 @@ html p {
   word-break: keep-all;
   white-space: nowrap;
   color: gray;
+}
+#site-container #site-about,
+#site-container #site-contact {
+  position: fixed;
+  word-break: keep-all;
+  white-space: nowrap;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+#site-container #site-logo,
+#site-container #site-about,
+#site-container #site-contact {
+  display: none;
+}
+#site-container.home #site-logo {
+  display: block;
+}
+#site-container.about #site-about {
+  display: block;
+}
+#site-container.contact #site-contact {
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,25 +1,25 @@
 // requires utilities.js
+function flashElement(ele, callback) {
+    ele.style.visibility = "hidden";
+    setTimeout(() => {
+        ele.style.visibility = "visible";
+        setTimeout(() => {
+            ele.style.visibility = "hidden";
+                setTimeout(() => {
+                    callback();
+                    ele.style.visibility = "visible";
+                }, 80);
+        }, 70);
+    }, 50);
+}
+
 
 function SALogoAnimation() {
     const logo = document.getElementById('site-logo');
     const rotate_config = ['45deg', '90deg', '135deg', '180deg', '225deg', '270', '315deg']
 
-    const do_transform = () => {
-        logo.style.visibility = "hidden";
-        setTimeout(() => {
-            logo.style.visibility = "visible";
-            setTimeout(() => {
-                logo.style.visibility = "hidden";
-                    setTimeout(() => {
-                        logo.style.visibility = "visible";
-                        logo.style.transform = 'translate(-50%, -50%) rotate(' + rotate_config[Math.floor(Math.random() * rotate_config.length)] + ')'
-                    }, 80);
-            }, 70);
-        }, 50);
-    }
-
     setRandInterval(() => {
-        do_transform();
+        flashElement(logo, () => {logo.style.transform = 'translate(-50%, -50%) rotate(' + rotate_config[Math.floor(Math.random() * rotate_config.length)] + ')'});
     }, 3000, 8000);
 }
 
@@ -72,6 +72,49 @@ function main() {
     }, 1);
     initPromptAnimation(prompts);
     SALogoAnimation();
+
+    // pages
+
+    const site_container = document.getElementById('site-container');
+    const nav_home = document.getElementById('nav-home');
+    const nav_about = document.getElementById('nav-about');
+    const nav_contact = document.getElementById('nav-contact');
+
+    const site_home = document.getElementById('site-logo');
+    const site_about = document.getElementById('site-about');
+    const site_contact = document.getElementById('site-contact');
+
+    let current_page = "home";
+    let current_page_ele = site_home;
+    // home
+    nav_home.addEventListener('click', () => {
+        flashElement(current_page_ele, () => {
+            site_container.classList.remove(current_page);
+            site_container.classList.add('home');
+            current_page = 'home';
+            current_page_ele = site_home;
+        });
+    });
+
+    // about
+    nav_about.addEventListener('click', () => {
+        flashElement(current_page_ele, () => {
+            site_container.classList.remove(current_page);
+            site_container.classList.add('about');
+            current_page = 'about';
+            current_page_ele = site_about;
+        });
+    });
+
+    // contact
+    nav_contact.addEventListener('click', () => {
+        flashElement(current_page_ele, () => {
+            site_container.classList.remove(current_page);
+            site_container.classList.add('contact');
+            current_page = 'contact';
+            current_page_ele = site_contact;
+        });
+    });
 }
 
 window.addEventListener('load', main);

@@ -38,11 +38,11 @@ $site-padding:      2.5%;
             position: relative;
             display: flex;
             flex-direction: column;
-            text-decoration: none;
-            color: white;
 
             transform: rotate((-90deg));
             width: 10vh;
+
+            cursor: pointer;
 
             p {
                 text-align: left;
@@ -59,4 +59,37 @@ $site-padding:      2.5%;
             color: gray;
         }
     }    
+
+    #site-about,
+    #site-contact {
+        position: fixed;
+        word-break: keep-all;
+        white-space: nowrap;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+    }
+
+    #site-logo,
+    #site-about,
+    #site-contact {
+        display: none;
+    }
+
+    &.home {
+        #site-logo {
+            display: block;
+        }
+    }
+    &.about {
+        #site-about {
+            display: block;
+        }
+    }
+    &.contact {
+        #site-contact {
+            display: block;
+        }
+    }
 }
