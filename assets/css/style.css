@@ -9,7 +9,7 @@ html p {
 }
 
 #site-container #site-logo {
-  height: 55vh;
+  height: 45vh;
   width: 80vw;
   object-fit: contain;
   position: fixed;
