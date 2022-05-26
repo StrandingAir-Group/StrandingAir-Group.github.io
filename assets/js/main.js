@@ -22,6 +22,7 @@ function SALogoAnimation() {
     setRandInterval(() => {
         flashElement(logo, () => {logo.style.transform = 'translate(-50%, -50%) rotate(' + rotate_config[Math.floor(Math.random() * rotate_config.length)] + ')'});
     }, 3000, 8000);
+    
 }
 
 function initPromptAnimation(prompts) {

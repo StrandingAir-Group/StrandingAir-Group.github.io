@@ -9,8 +9,8 @@ html p {
 }
 
 #site-container #site-logo {
-  height: 45vh;
-  width: 80vw;
+  height: 50vh;
+  width: 50vw;
   object-fit: contain;
   position: fixed;
   top: 40%;
