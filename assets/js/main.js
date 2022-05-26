@@ -16,7 +16,7 @@ function flashElement(ele, callback) {
 
 function SALogoAnimation() {
     const logo = document.getElementById('site-logo');
-    const rotate_config = ['45deg', '90deg', '135deg', '-45deg', '-90deg', '-135deg']
+    const rotate_config = ['0deg', '45deg', '90deg', '135deg', '-45deg', '-90deg', '-135deg']
 
     logo.style.transform = 'translate(-50%, -50%) rotate(' + rotate_config[Math.floor(Math.random() * rotate_config.length)] + ')';
     setRandInterval(() => {
