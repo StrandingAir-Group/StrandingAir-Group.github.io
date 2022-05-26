@@ -3,6 +3,7 @@ $site-padding:      2.5%;
 #site-container {
     #site-logo {
         height: 70vh;
+        width: 95vw;
         object-fit: contain;
         position: fixed;
         top: 40%;
@@ -25,7 +26,7 @@ $site-padding:      2.5%;
         display: flex;
         position: fixed;
         gap: 5vh;
-        top: 88%;
+        bottom: 7.5%;
         left: 50%;
         transform: translate(-50%, -50%);
         p {
