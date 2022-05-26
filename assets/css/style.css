@@ -52,6 +52,7 @@ html p {
   text-align: left;
 }
 #site-container #site-prompts-container .prompt {
+  pointer-events: none;
   position: fixed;
   word-break: keep-all;
   white-space: nowrap;
