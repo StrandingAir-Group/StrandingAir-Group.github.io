@@ -91,7 +91,13 @@ function initPromptAnimation(prompts) {
 }
 
 function main() {
-    const prompts = ["施工中...", "Work in progress...", "진행중인 작업..."];
+    const prompts = [];
+    const prompts_ele = document.querySelectorAll('#site-prompts-container p');
+    for (let ele of prompts_ele) {
+        prompts.push(ele.innerHTML);
+        ele.remove();
+    }
+
     const footer = document.getElementById('site-footer');
 
     // init footer
