@@ -61,7 +61,7 @@ body.loading #site-loading {
   position: fixed;
   top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%);
   z-index: 1000;
   pointer-events: none;
 }
@@ -92,11 +92,8 @@ body.loading #site-loading {
   position: relative;
   display: flex;
   flex-direction: column;
-  transform: rotate(-90deg);
   width: 10vh;
   cursor: pointer;
-  border: solid;
-  border-width: 0.1vh;
   padding: 0.5vh;
   background-color: black;
   color: white;
@@ -138,23 +135,11 @@ body.loading #site-loading {
 #site-container.home #site-logo {
   display: block;
 }
-#site-container.home #site-navigation #nav-home {
-  border: dashed;
-  border-width: 0.1vh;
-}
 #site-container.about #site-about {
   display: block;
 }
-#site-container.about #site-navigation #nav-about {
-  border: dashed;
-  border-width: 0.1vh;
-}
 #site-container.contact #site-contact {
   display: block;
-}
-#site-container.contact #site-navigation #nav-contact {
-  border: dashed;
-  border-width: 0.1vh;
 }
 
 /*# sourceMappingURL=style.css.map */
