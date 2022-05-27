@@ -40,7 +40,7 @@ function initPromptAnimation(prompts) {
                     top:  String(Math.floor(Math.random() * 65) + 7.5) + '%',
                     left: '0',
                     transform: 'translate(-100%, 0)',
-                    transition: 'all ' + String(transition_time) + 's' + ' ' + 'linear',
+                    transition: 'all ' + String(transition_time) + 's' + ' ',
                     fontSize: String(Math.floor(Math.random() * 3) + 1) + 'vh',
                     color: 'rgba(180,180,180,' + String(Math.random() * 0.9 + 0.1) + ')'
                 },
