@@ -67,9 +67,9 @@ body.loading #site-loading {
 }
 #site-container #site-footer {
   position: fixed;
-  bottom: 2.5%;
+  bottom: 2%;
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -50%);
   word-break: keep-all;
   white-space: nowrap;
 }
@@ -78,7 +78,7 @@ body.loading #site-loading {
   position: fixed;
   justify-content: space-between;
   width: 40vh;
-  bottom: 5%;
+  bottom: 4%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1000;
@@ -103,6 +103,9 @@ body.loading #site-loading {
 }
 #site-container #site-navigation .nav-item p {
   text-align: center;
+  line-height: 2vh;
+  margin-top: 0.5vh;
+  margin-bottom: 0.5vh;
 }
 #site-container #site-prompts-container .prompt {
   pointer-events: none;
