@@ -24,13 +24,13 @@ html p {
   font-family: "Noto Sans KR";
   font-size: normal;
   font-weight: 400;
-  src: url(../font/NotoSansKR-Regular.otf) format("opentype");
+  src: url(../font/NotoSansKR-Regular.subset.woff) format("woff");
 }
 @font-face {
   font-family: "Noto Sans SC";
   font-size: normal;
   font-weight: 400;
-  src: url(../font/NotoSansSC-Regular.otf) format("opentype");
+  src: url(../font/NotoSansSC-Regular.subset.woff) format("woff");
 }
 body.loading #site-container {
   visibility: hidden;
