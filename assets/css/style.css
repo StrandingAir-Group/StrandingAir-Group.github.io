@@ -116,6 +116,7 @@ body.loading #site-loading {
 }
 #site-container #site-about,
 #site-container #site-contact {
+  max-width: 40vh;
   position: fixed;
   word-break: keep-all;
   white-space: nowrap;
