@@ -9,6 +9,8 @@ body {
     }
 }
 
+
+
 #site-loading {
     display: none;
     position: fixed;
@@ -113,6 +115,10 @@ body {
         text-align: center;
         p {
             margin: 0.25vh 0 0.25vh 0;
+        }
+
+        #wechat-qr {
+            width: 40vh;
         }
         
     }
